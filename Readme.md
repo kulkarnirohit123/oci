@@ -1,22 +1,28 @@
 Infrastructure as a code for OKE 
 terraform-oci-oke/
-│── modules/
-│   ├── vcn/
-│   │   ├── main.tf
+│── provider.tf          # Defines the OCI provider
+│── main.tf              # Calls the modules
+│── variables.tf         # Global variables for Terraform
+│── terraform.tfvars     # Optional: Store default values
+│── outputs.tf           # Define output values
+│
+├── modules/
+│   ├── network/
+│   │   ├── main.tf      # Create VCN, Subnets, etc.
 │   │   ├── variables.tf
 │   │   ├── outputs.tf
-│   ├── cluster/
-│   │   ├── main.tf
+│   │
+│   ├── oke/
+│   │   ├── main.tf      # Create OKE cluster
 │   │   ├── variables.tf
 │   │   ├── outputs.tf
-│   ├── worker-nodes/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│── main.tf
-│── variables.tf
-│── outputs.tf
-│── provider.tf
-│── terraform.tfvars
-│── backend.tf
+│   │
+│   ├── node_pool/
+│       ├── main.tf      # Create OKE worker nodes
+│       ├── variables.tf
+│       ├── outputs.tf
+│
+│── backend.tf (Optional)  # Remote backend configuration
+│── .terraform/ (Terraform state directory)
+│── .terraform.lock.hcl
 
