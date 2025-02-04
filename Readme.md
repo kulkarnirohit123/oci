@@ -26,3 +26,4 @@ terraform-oci-oke/
 │── .terraform/ (Terraform state directory)
 │── .terraform.lock.hcl
 
+
