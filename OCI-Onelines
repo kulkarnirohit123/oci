@@ -1,0 +1,4 @@
+commands:
+  - "oci ce node-pool update --node-pool-id <your_node_pool_ocid> --node-config-details '{\"size\": 3, \"shape\": \"VM.Standard2.16\", \"ocpus\": 16, \"memoryInGBs\": 64}'"
+  - "oci usage-api request-summarized-usages --tenant-id <your_tenant_ocid> --time-usage-start 2023-01-01T00:00:00Z --time-usage-end 2023-01-31T23:59:59Z --granularity HOURLY --query \"data[?\\\"region\\\"=='ap-tokyo-1']\""
+  - "aws ec2 describe-instances --query \"Reservations[*].Instances[*].{Instance:InstanceId,PrivateIP:PrivateIpAddress,State:State.Name}\""
