@@ -23,6 +23,3 @@ terraform-oci-oke/
 │       ├── outputs.tf
 │
 │── backend.tf (Optional)  # Remote backend configuration
-│── .terraform/ (Terraform state directory)
-│── .terraform.lock.hcl
-
